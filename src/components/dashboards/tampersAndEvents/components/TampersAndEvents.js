@@ -6,9 +6,7 @@ import Buttons from './Buttons';
 
 export default function TampersAndEvents() {
     return (
-        <Box sx={{ width: '100%' }}>
-
-            <Paper style={{ borderRadius: '20px' }} elevation={6}>
+        <Box sx={{ width: '85%' }}>
                 <Grid container direction={'row'}>
                     <Grid item xl={6} md={3} xs={12} sm={6}>
                         <Typography variant="overline">Discom :</Typography>
@@ -161,7 +159,7 @@ export default function TampersAndEvents() {
                 </Grid>
                 <div style={{ minHeight: '30px' }} />
                 <Buttons />
-            </Paper>
+           
         </Box>
 
 

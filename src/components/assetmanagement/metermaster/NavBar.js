@@ -1,26 +1,30 @@
-import { Typography, AppBar, Box, CssBaseline, Toolbar, IconButton, } from '@mui/material';
+import { Typography, AppBar, Box,Grid, CssBaseline, Toolbar, IconButton, } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const NavBar=()=>{// Navbar component
-    return(
-        <div>
-        <CssBaseline />
-        <AppBar position="static" style={{ background: '#2E3B55' }}>
-				<Toolbar>
-					<IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-						<HomeIcon style={{ color: 'black' }} />
-					</IconButton>
-					<IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-						<ChevronRightIcon style={{ color: 'black' }} />
-					</IconButton>
-					<Typography>Asset Management</Typography>
-				</Toolbar>
-				<Typography style={{ marginRight: 'auto', marginLeft: '20px' }}>Meter Search</Typography>
-			</AppBar>
-        </div>
+const NavBar=()=>{//Header
+  return(
+      <div>
+      <CssBaseline />
+      <AppBar position="static" style={{ background: '#2E3B55' }}>
+      <Toolbar>
+        <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
+          <HomeIcon style={{ color: 'white' }} />
+        </IconButton>
+        <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
+          <ChevronRightIcon style={{ color: 'white' }} />
+        </IconButton>
+        <Typography>Asset Management</Typography>
+        <IconButton style={{ marginLeft: '0px' }} size="large" edge="start" color="inherit" aria-label="open drawer">
+          <ChevronRightIcon style={{ color: 'white' }} />
+        </IconButton>
+        <Typography style={{ marginRight: 'auto', marginLeft: '0px' }} variant='h6'>Meter Master</Typography>
+      </Toolbar>
+      
+    </AppBar>
+    
+      </div>
 
-    )
+  )
 }
-export default NavBar
+export default NavBar;

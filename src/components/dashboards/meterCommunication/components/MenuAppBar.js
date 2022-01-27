@@ -1,58 +1,47 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import { Typography, Grid} from '@mui/material';
-import IconButton from '@mui/material/IconButton';
-import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
+import { Typography, AppBar, Box,Card,Grid, CssBaseline, Toolbar, IconButton, } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import ContentComponent from './ContentComponent';
 
-export default function MenuAppBar() {
-
-
-  return (
-    <Box sx={{ flexGrow: 100 }}>
-      <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-
-        <Toolbar>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 10 }}
-              >
-                <HomeTwoToneIcon />
-              </IconButton>
-              <Typography align='left' variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Dashboard
-              </Typography>
-              <Typography align='right' variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Meter Communication
-              </Typography>
-            </Toolbar>
-
-          </AppBar>
-          </Box>
-
-
-
-
-
-          <Grid container rowSpacing={3} columnSpacing={2}>
+const MenuAppBar=()=>{// MenuAppBar component
+  return(
+      <div>
+      <CssBaseline />
+      <AppBar position="static" style={{ background: '#2E3B55' }}>
+      <Toolbar>
+        <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
+          <HomeIcon style={{ color: 'white' }} />
+        </IconButton>
+        <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
+          <ChevronRightIcon style={{ color: 'white' }} />
+        </IconButton>
+        <Typography>Dashboards</Typography>
+        <IconButton style={{ marginLeft: '0px' }} size="large" edge="start" color="inherit" aria-label="open drawer">
+          <ChevronRightIcon style={{ color: 'white' }} />
+        </IconButton>
+        <Typography style={{ marginRight: 'auto', marginLeft: '0px' }} variant='h6'>Meter Communication</Typography>
+      </Toolbar>
+      
+    </AppBar>
+    <div>
+    <Card elevation={8}>
+    <Grid container rowSpacing={3} columnSpacing={2}>
             <Grid item xs={1}>
 
             </Grid>
             <Grid item xs={10}>
               <ContentComponent />
             </Grid>
+            <Grid item xs={1}>
+
+            </Grid>
 
           </Grid>
+          </Card>
+      </div>
+      </div>
 
-      
-
-    </Box>
-  );
+  )
 }
+export default MenuAppBar

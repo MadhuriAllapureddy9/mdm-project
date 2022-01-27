@@ -18,7 +18,7 @@ const MeterMaster = () => {//Main Meter Master Component
 	const classes = useStyles();// assigning custom styling hook to a classes variable
 	const dispatch = useDispatch();// useDispatch()	hook is used to dispatching search event and new meter event(buttons)
 	return (
-		<Card elevation={8}>
+		<Card elevation={8} >
 			<Box
 				component="form"
 				sx={{

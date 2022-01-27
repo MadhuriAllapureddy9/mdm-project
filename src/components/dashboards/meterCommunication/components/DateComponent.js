@@ -5,7 +5,8 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 
 
-export default function BasicDatePicker() {
+export default function BasicDatePicker() {//function to pick the data
+  //useState(null) hook is to set and store the date value, initial value will be null
   const [value, setValue] = React.useState(null);
 
   return (

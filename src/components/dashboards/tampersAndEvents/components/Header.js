@@ -1,32 +1,30 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Typography, AppBar, Box,Grid, CssBaseline, Toolbar, IconButton, } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
-//import { makeStyles } from '@mui/styles';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
+const ResponsiveAppBar=()=>{//Header
+  return(
+      <div>
+      <CssBaseline />
+      <AppBar position="static" style={{ background: '#2E3B55' }}>
+      <Toolbar>
+        <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
+          <HomeIcon style={{ color: 'white' }} />
+        </IconButton>
+        <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
+          <ChevronRightIcon style={{ color: 'white' }} />
+        </IconButton>
+        <Typography>Dashboards</Typography>
+        <IconButton style={{ marginLeft: '0px' }} size="large" edge="start" color="inherit" aria-label="open drawer">
+          <ChevronRightIcon style={{ color: 'white' }} />
+        </IconButton>
+        <Typography style={{ marginRight: 'auto', marginLeft: '0px' }} variant='h6'>Tampers and Events</Typography>
+      </Toolbar>
+      
+    </AppBar>
+    
+      </div>
 
-const ResponsiveAppBar = () => {
-    // const classes  = useStyles();
-    return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" style={{ background: '#2E3B55' }}>
-                <Toolbar>
-                    <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-                        <HomeIcon style={{ color: 'black' }} />
-                    </IconButton>
-                    <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-                        <ChevronRightIcon style={{ color: 'black' }} />
-                    </IconButton>
-                    <Typography>Dashboards</Typography>
-                </Toolbar>
-                <Typography style={{ marginRight: 'auto' }}>Tampers And Events</Typography>
-            </AppBar>
-        </Box>
-    );
-};
+  )
+}
 export default ResponsiveAppBar;
-
